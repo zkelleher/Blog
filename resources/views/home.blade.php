@@ -1,10 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
+
+<div class="container-fluid">
+    <div class="row">
+        @include('partials.sidenavbar')
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+            </div>
+        </main>
+    </div>
+</div>
+
+            <!-- <div class="card">
                 <div class="card-header">Dashboard</div>
 
                 <div class="card-body">
@@ -16,8 +25,7 @@
 
                     You are logged in!
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+            </div> -->
 @endsection
+
+
