@@ -7,7 +7,8 @@
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Create A Post</h1>
                 </div>
-                    <form action="" method="post">
+                    <form action="{{ route('store_new_post') }}" method="post">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="title">Title</label>
                             <input type="text" class="form-control"  aria-describedby="emailHelp" placeholder="Enter blog title" name="title" required>
