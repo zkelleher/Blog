@@ -22,7 +22,9 @@
                     @foreach($posts as $post)
                         <div class="col-md-4">
                             <div class="card" style="width: 18rem;">
-                                {{--<img class="card-img-top" src="..." alt="Blog Post Image">--}}
+                                @if($post->image)
+                                    <img class="card-img-top" src="{{ asset('images/'.$post->image) }}" alt="Blog Post Image">
+                                @endif
                                 <div class="card-body">
                                     <h5 class="card-title">{{ $post->title }} by <small><i>{{ $post->writer->name }}</i></small></h5>
                                     <p class="card-text">
@@ -35,7 +37,7 @@
                         </div>
                     @endforeach
                 </div>
-                
+
             </main>
         </div>
     </div>
