@@ -73,8 +73,18 @@ class HomeController extends Controller
         $article->title = $request->get('title');
         $article->body = $request->get('body');
         $article->author = Auth::id();
+        $article->image = $input['imagename'];
         $article->save();
         return redirect()->route('all_posts')->with('status', 'New article has been successfully created!');
+    }
+
+    /**
+     * Edit post
+     */
+    public function editPost($post_id)
+    {
+        $post = Blog::find($post_id);
+        return view('edit_form', ['post' => $post]);
     }
 
 }
